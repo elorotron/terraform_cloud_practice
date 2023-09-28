@@ -55,7 +55,7 @@ resource "aws_instance" "prod_1" {
   vpc_security_group_ids = [aws_security_group.dynamic_sg.id]
   user_data              = filebase64("user_data.sh")
   tags = {
-    Name  = "Prod_server_${terraform.workspace}"
+    Name  = "server_${terraform.workspace}"
     Owner = "Denis Ananev"
   }
 }
